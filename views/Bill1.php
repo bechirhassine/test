@@ -4,7 +4,7 @@ include "../core/Bill_Core.php"; ?>
 <html class="no-js">
     
     <head>
-        <title>Client</title>
+        <title>Bill</title>
         <!-- Bootstrap -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -56,15 +56,13 @@ include "../core/Bill_Core.php"; ?>
             <div class="row-fluid">
                 <div class="span3" id="sidebar">
                     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-                        <li >
+                        <li class="active">
                             <a href="Bill1.php"><i class="icon-chevron-right"></i> Bills</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="icon-chevron-right"></i> Calendar</a>
-                        </li>
+                        
 
-                         <li class="active">
-                            <a href="Bill1.php"> Client</a>
+                         <li >
+                            <a href="Client1.php"> Client</a>
                         </li>
                     </ul>
                 </div>
@@ -75,14 +73,14 @@ include "../core/Bill_Core.php"; ?>
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">
                                     <form method="POST" action="afficherBill.php"></div>
-                                <div class="muted pull-left">Afficher Client</div>
+                                <div class="muted pull-left">Show Bills</div>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
                                     <form class="form-horizontal">
                                       <fieldset>
                                         <div class="control-group">
-                                   <button class="btn btn-warning btn-large" style="margin-left:auto;margin-right:auto;display:block;" >Afficher Les Client</button>    
+                                   <button class="btn btn-warning btn-large" style="margin-left:auto;margin-right:auto;display:block;" >Show Bills</button>    
                                         </div>
                                       </fieldset>
                                     </form>
@@ -96,7 +94,7 @@ include "../core/Bill_Core.php"; ?>
                             <div class="navbar navbar-inner block-header">
 
                                 <div class="muted pull-left">
-                                     Client</div>
+                                     Bill</div>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
@@ -111,7 +109,7 @@ include "../core/Bill_Core.php"; ?>
                                    <form method="POST" action="addBill.php" enctype="multipart/form-data">
                                   
                                       <fieldset>
-                                        <legend>Ajouter Client</legend>
+                                        <legend>Add Bill</legend>
                                         <div class="control-group">
                                           <label class="control-label" for="typeahead">Full Name</label>
                                           <div class="controls">
@@ -143,8 +141,8 @@ include "../core/Bill_Core.php"; ?>
                                         
                                         
                                         <div class="form-actions">
-                                          <button  type="submit" name="ajouter" value="ajouter" onclick="envoyer();" class="btn btn-primary">Ajouter</button>
-                                          <button type="reset" class="btn">Annuler</button>
+                                          <button  type="submit" name="ajouter" value="ajouter" onclick="envoyer();" class="btn btn-primary">Add</button>
+                                          <button type="reset" class="btn">Cancel</button>
                                         </div>
                                       </fieldset>
                                 </form>
@@ -160,7 +158,7 @@ include "../core/Bill_Core.php"; ?>
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">
-                                     Modifier Client</div>
+                                     Update Client</div>
                                
                             </div>
                             <div class="block-content collapse in">
@@ -176,7 +174,7 @@ include "../core/Bill_Core.php"; ?>
                                     <form method="post" action="modifierBill.php">
   
                                       <fieldset>
-                                        <legend>Modifier Bill</legend>
+                                        <legend>Update Bill</legend>
                                         <div class="control-group">
                                           <label class="control-label" for="typeahead">Full name</label>
                                           <div class="controls">
@@ -273,8 +271,8 @@ foreach($listeBill as $row){
                                       </div>
                                           <br />
                                           <div class="form-actions">
-                                          <button type="submit" onclick="envoyermodifier();" name="supprimer" value="supprimer"  class="btn btn-primary">Supprimer</button>
-                                          <button type="reset" class="btn">Annuler</button>
+                                          <button type="submit" onclick="envoyermodifier();" name="supprimer" value="supprimer"  class="btn btn-primary">Delete</button>
+                                          <button type="reset" class="btn">Cancel</button>
                                         </div>
                                       </fieldset>
                                     </form>
