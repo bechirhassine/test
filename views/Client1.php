@@ -57,11 +57,9 @@ include "../core/Client_Core.php"; ?>
                 <div class="span3" id="sidebar">
                     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
                         <li >
-                            <a href="index.html"><i class="icon-chevron-right"></i> Dashboard</a>
+                            <a href="Bill1.php"><i class="icon-chevron-right"></i> Bill</a>
                         </li>
-                        <li>
-                            <a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
-                        </li>
+                       
 
                          <li class="active">
                             <a href="Client1.php"> Client</a>
@@ -75,14 +73,14 @@ include "../core/Client_Core.php"; ?>
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">
                                     <form method="POST" action="afficherClient.php"></div>
-                                <div class="muted pull-left">Afficher Client</div>
+                                <div class="muted pull-left">Show Client</div>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
                                     <form class="form-horizontal">
                                       <fieldset>
                                         <div class="control-group">
-                                   <button class="btn btn-warning btn-large" style="margin-left:auto;margin-right:auto;display:block;" >Afficher Les Client</button>    
+                                   <button class="btn btn-warning btn-large" style="margin-left:auto;margin-right:auto;display:block;" >Show Client</button>    
                                         </div>
                                       </fieldset>
                                     </form>
@@ -111,7 +109,7 @@ include "../core/Client_Core.php"; ?>
                                    <form method="POST" action="addClient.php" enctype="multipart/form-data">
                                   
                                       <fieldset>
-                                        <legend>Ajouter Client</legend>
+                                        <legend>Add Client</legend>
                                         <div class="control-group">
                                           <label class="control-label" for="typeahead">Nom</label>
                                           <div class="controls">
@@ -145,8 +143,8 @@ include "../core/Client_Core.php"; ?>
                                        
                                         
                                         <div class="form-actions">
-                                          <button  type="submit" name="ajouter" value="ajouter" onclick="envoyer();" class="btn btn-primary">Ajouter</button>
-                                          <button type="reset" class="btn">Annuler</button>
+                                          <button  type="submit" name="ajouter" value="ajouter" onclick="envoyer();" class="btn btn-primary">Add</button>
+                                          <button type="reset" class="btn">Cancel</button>
                                         </div>
                                       </fieldset>
                                 </form>
@@ -162,7 +160,7 @@ include "../core/Client_Core.php"; ?>
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">
-                                     Modifier Client</div>
+                                     Update Client</div>
                                
                             </div>
                             <div class="block-content collapse in">
@@ -178,9 +176,9 @@ include "../core/Client_Core.php"; ?>
                                     <form method="post" action="modifierClient.php">
   
                                       <fieldset>
-                                        <legend>Modifier Client</legend>
+                                        <legend>Update Client</legend>
                                         <div class="control-group">
-                                          <label class="control-label" for="typeahead">Nom</label>
+                                          <label class="control-label" for="typeahead">Name</label>
                                           <div class="controls">
                                             <input type="text" class="span6" id="typeahead"  data-provide="typeahead" data-items="4"  name="Nom" required>
                                           </div>
@@ -192,7 +190,7 @@ include "../core/Client_Core.php"; ?>
                                           </div>
                                           </div>
                                           <div class="control-group">
-                                          <label class="control-label" for="typeahead">Solde</label>
+                                          <label class="control-label" for="typeahead">Balance</label>
                                           <div class="controls">
                                             <input type="text" class="span6" id="typeahead"  data-provide="typeahead" data-items="4"  name="Solde" >
                                           </div>
@@ -226,8 +224,8 @@ foreach($ListeClient as $row){
                                       
 
                                         <div class="form-actions">
-                                          <button type="submit" onclick="envoyermodifier();" class="btn btn-primary" name="modifier" value="modifier">Modifier</button>
-                                          <button type="reset" class="btn">Annuler</button>
+                                          <button type="submit" onclick="envoyermodifier();" class="btn btn-primary" name="modifier" value="modifier">Update </nutton>
+                                          <button type="reset" class="btn">Cancel</button>
                                         </div>
                                       </fieldset>
                                     </form>
@@ -243,7 +241,7 @@ foreach($ListeClient as $row){
                         <div class="block">
 
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Supprimer Client</div>
+                                <div class="muted pull-left">Delete Client</div>
                             </div>
                             <div class="block-content collapse in">
 
@@ -258,9 +256,9 @@ foreach($ListeClient as $row){
                                     ?>
                                 <div class="span12">
                                       <fieldset>
-                                        <legend>Supprimer Client</legend>
+                                        <legend>Delete Client</legend>
                                         <div class="control-group">
-                                          <label class="control-label" for="typeahead">Nom du Client</label>
+                                          <label class="control-label" for="typeahead">Client name</label>
                                           <div class="controls">
                                             <input type="text" name="Nom"> 
                                                
@@ -286,8 +284,8 @@ foreach($listeClient as $row){
                                       </div>
                                           <br />
                                                                              <div class="form-actions">
-                                          <button type="submit" onclick="envoyermodifier();" name="supprimer" value="supprimer"  class="btn btn-primary">Supprimer</button>
-                                          <button type="reset" class="btn">Annuler</button>
+                                          <button type="submit" onclick="envoyermodifier();" name="supprimer" value="supprimer"  class="btn btn-primary">Delete</button>
+                                          <button type="reset" class="btn">Cancel</button>
                                         </div>
                                       </fieldset>
                                     </form>
